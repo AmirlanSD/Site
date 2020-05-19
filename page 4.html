@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Личный сайт студента GeekBrains</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script type="text/javascript">
+        var correctAnswersCount = 0;
+
+        function askQuestion(textBoxId, answer) {
+            var userAnswer = document.getElementById(textBoxId).value;
+            userAnswer = userAnswer.toLowerCase();
+            if (userAnswer == answer) {
+                correctAnswersCount++;
+            }
+        }
+
+        function playPuzzle() {
+            correctAnswersCount = 0;
+            askQuestion("userAnswer1", "загадка");
+            askQuestion("userAnswer2", "время");
+            askQuestion("userAnswer3", "тень");
+            askQuestion("userAnswer4", "электричество");
+            askQuestion("userAnswer5", "рука");
+            askQuestion("userAnswer6", "карта");
+            alert("Вы угадали: " + correctAnswersCount + " загадок.")
+        }
+    </script>
+</head>
+<body>
+
+    <div id="header">
+        <a href="index.html">Главная</a> <span>/</span>
+        <a href="page 4.html">Загадки</a> <span>/</span>
+        <a href="page 3.html">Угадайка</a> <span>/</span>
+        <a href="page 2.html">Угадайка мультиплеер</a>
+    </div>
+        
+    <div id="content">
+        <h1>Игра в загадки</h1>
+        <div id="center"> 
+            <img src="img/photo 2.png" alt="фотография">
+            <div id="box">
+                <p>Если ты не знаешь что я, тогда я что-то. Если ты знаешь что я, тогда я нечто. Кто я?</p>
+                <input type="text" id="userAnswer1">
+                <p>У меня нет крыльев, но я умею летать, и никто не сможеть меня остановить. Кто я?</p>
+                <input type="text" id="userAnswer2">
+                <p>Я всегда и везде хожу за тобой, от меня невозможно избавиться, но можно потерять из виду, и умел бы говорить рассказал бы все о тебе. Кто я?</p>
+                <input type="text" id="userAnswer3">
+                <p>Я все бегаю то туда, то сюда. Но если ко мне подключить провода, я потеку, как вода. Кто я?</p>
+                <input type="text" id="userAnswer4">
+                <p>У меня есть пятеро слуг. Они дают мне все что хочу, а они за мой счет живут. Кто я?</p>
+                <input type="text" id="userAnswer5">
+                <p>Да, у меня не много костюмов и едва ли они редкие. Но когда я показываю свое благородное лицо, со мной никто не сравнится. Кто я?</p>
+                <input type="text" id="userAnswer6">
+                <br><br>
+                <a href="#" onclick="playPuzzle()">Ответить</a>
+              </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
